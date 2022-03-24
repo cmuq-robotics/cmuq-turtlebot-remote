@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- Move base -->
+  <arg name="custom_param_file" default="$(find turtlebot2_navigation)/param/rplidar_costmap_params.yaml"/>
+  <include file="$(find turtlebot2_navigation)/launch/includes/move_base.launch.xml">
+    <arg name="custom_param_file" value="$(arg custom_param_file)"/>
+  </include>
+
+</launch>
+
